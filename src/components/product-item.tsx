@@ -34,6 +34,7 @@ export const ProductItem = ({ data }: Props) => {
             alt={data.label}
             width={200}
             height={200}
+            unoptimized
             className="max-w-full h-48"
           />
         </Link>

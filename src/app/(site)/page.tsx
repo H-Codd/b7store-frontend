@@ -1,16 +1,18 @@
 import { InfoCard } from "@/components/home/infocard";
-import { data } from "@/data";
+
 import { Banners } from "@/components/home/banners";
 import { ProductListSkeleton } from "@/components/home/product-list-skeleton";
 import { Suspense } from "react";
 import { MostViewedProducts } from "@/components/home/most-viewed-products";
 import { MostSoldProducts } from "@/components/home/most-sold-products";
 import { FooterEmail } from "@/components/home/footer-email";
+import { getBanners } from "@/actions/get-banners";
 
-export default function Page() {
+export default async function Page() {
+  const banners = await getBanners()
   return (
     <div className="">
-      <Banners list={data.banners} />
+      <Banners list={banners} />
       <div className="flex flex-col md:flex-row gap-4 md:gap-8 mt-6 md:12">
         <InfoCard
           icon="/ui/truck-line.png"

@@ -12,7 +12,7 @@ export default function SiteLayout({
     <div>
       <StoreHydration />
         <Header item={data.menu}/>
-        <main className="w-full max-w-6xl mx-auto p-6">
+        <main className="w-full max-w-6xl bg-white mx-auto p-6">
             {children}
         </main>
         <FooterShop data={data.menu}/>

@@ -51,6 +51,7 @@ export const Banners = ({ list }: Props) => {
               width={1200}
               height={400}
               className="rounded-sm"
+              unoptimized
             />
           </Link>
         ))}

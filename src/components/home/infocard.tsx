@@ -12,8 +12,8 @@ export const InfoCard = ({ icon, title, description }: InfoCardProps) => {
       <div className="w-32 border-r border-gray-200 flex justify-center items-center">
         <Image src={icon} alt="" width={40} height={40} />
       </div>
-      <div className="flex-1 pl-8">
-        <div className="font-bold text-xl">{title}</div>
+      <div className="flex-1 px-9 text-center">
+        <div className="font-bold text-xl p-2">{title}</div>
         <div className="text-gray-500">{description}</div>
       </div>
     </div>

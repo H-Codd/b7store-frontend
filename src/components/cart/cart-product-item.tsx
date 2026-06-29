@@ -38,6 +38,7 @@ export const CartProductItem = ({ item }: Props) => {
           alt={item.product.label}
           width={96}
           height={96}
+          unoptimized
           className="size-24 md:size-16"
         />
       </div>

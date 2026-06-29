@@ -10,12 +10,6 @@ export const CartProductList = ({ initialList }: Props) => {
       {initialList.map((item) => (
         <CartProductItem key={item.product.id} item={item} />
       ))}
-      {initialList.map((item) => (
-        <CartProductItem key={item.product.id} item={item} />
-      ))}
-      {initialList.map((item) => (
-        <CartProductItem key={item.product.id} item={item} />
-      ))}
     </div>
   );
 };

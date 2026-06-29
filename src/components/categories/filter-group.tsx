@@ -1,13 +1,15 @@
 import Image from "next/image"
 import { FilterItem } from "./filter-item"
 import { useState } from "react"
+import { CategoryMetadataValue } from "@/types/category";
 
 type Props = {
     id: string;
     name: string
+    values: CategoryMetadataValue[]
 }
 
-export const FilterGroup = ({id, name}:Props) => {
+export const FilterGroup = ({id, name, values}:Props) => {
     const [opened, setOpened] = useState<boolean>(false)
     return(
         <div className="mb-8">
@@ -18,9 +20,9 @@ export const FilterGroup = ({id, name}:Props) => {
                 </div>
             </div>
             <div className={`overflow-hidden ${opened ? 'max-h-96' : 'max-h-0'} transition-all`}>
-                <FilterItem groupId={id} item={{id: 'node', label: 'NodeJS'}} />
-                <FilterItem groupId={id} item={{id: 'react', label: 'React'}} />
-                <FilterItem groupId={id} item={{id: 'rn', label: 'React Native'}}/>
+                {values.map(item => (
+                    <FilterItem key={item.id} groupId={id} item={item} />
+                ))}
             </div>
         </div>
     )

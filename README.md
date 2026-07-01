@@ -67,6 +67,7 @@ Layout inspirado em e-commerces modernos, com listagem de produtos.
 
 ### Carrinho de Compras
 Adiciona/remover produtos e calcula frete via CEP.
+
 ![Carrinho](public/layout/Carrinho.png)
 
 ---
@@ -83,7 +84,6 @@ Sistema de login e cadastro integrado ao banco de dados com **Prisma** e **Postg
 ![Login](public/layout/Login.png)
 ![Cadastro](public/layout/Cadastro.png)
 
----
 
 ---
 
